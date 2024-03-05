@@ -1,0 +1,15 @@
+<div style="text-align:center">
+    <h1>{{ petName }}</h1>
+    <a routerLink="/">Volver a Inicio</a>
+
+    <div class="upload-container" (drop)="onDrop($event)" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)">
+      Arrastra imágenes aquí para subirlas
+      <div class="images">
+        <div class="image-container" *ngFor="let imageUrl of uploadedImages; let i = index">
+          <a [href]="imageUrl" target="_blank"><img [src]="imageUrl"></a>
+          <div><button class="delete-button" (click)="deleteImage(i)">Eliminar</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

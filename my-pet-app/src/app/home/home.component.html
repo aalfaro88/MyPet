@@ -1,0 +1,21 @@
+<!-- home.component.html -->
+<div style="text-align:center">
+    <h1>Welcome to Pets</h1>
+  </div>
+  
+  <div class="pet-list">
+    <div class="pet-title">
+      <h2>Pet Folders</h2>
+      <div class="new-pet-form">
+        <input type="text" [(ngModel)]="newPetName" placeholder="Enter new pet name" />
+        <button (click)="createPetFolder()">Create Pet Folder</button>
+      </div>
+    </div> 
+    <ul>
+      <li *ngFor="let folder of petFolders">
+        <div class="pet-name"><a [routerLink]="['/pet', folder]">{{ folder }}</a></div>
+        <div class="trash-icon" (click)="deletePetFolder(folder)">🗑️</div>
+      </li>
+    </ul>
+  </div>
+  

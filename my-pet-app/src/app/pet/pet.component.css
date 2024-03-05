@@ -1,0 +1,45 @@
+.upload-container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-container:hover,
+  .upload-container.dragover {
+    background-color: #e9e9e9;
+  }
+  
+  .images img {
+    width: 600px;
+    margin: 10px;
+  }
+  
+
+  .image-container {
+    display: inline-block;
+    margin: 10px;
+    text-align: center; /* Centra el contenido */
+  }
+  
+  .image-container img {
+    width: 200px; /* Ajusta este valor según sea necesario */
+    height: auto;
+    display: block; /* Asegura que el botón aparezca debajo de la imagen */
+    margin-bottom: 5px; /* Espacio entre la imagen y el botón */
+  }
+  
+  .delete-button {
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: darkred;
+  }
+  
